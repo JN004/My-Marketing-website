@@ -9,7 +9,7 @@
     --dark-gray: #555555;
     --transition: all 0.3s ease;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --hover-shadow: 0 8px 25px rgba(109, 109, 109, 0.15);
 }
 
 * {
@@ -199,7 +199,7 @@ nav {
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -207,7 +207,7 @@ nav {
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: var(--dark-gray);
 }
 
@@ -246,6 +246,7 @@ nav {
 .why-us-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .why-us-card p {
@@ -260,18 +261,18 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
 }
 
 .service-card {
     background-color: var(--secondary-color);
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 0;
-    text-align: center;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    text-align: center;
 }
 
 .service-card:hover {
@@ -280,14 +281,21 @@ nav {
 }
 
 .service-card .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin: 0 auto 20px;
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .service-card p {
@@ -320,14 +328,16 @@ footer {
     margin-bottom: 60px;
 }
 
-.footer-about h3, .footer-services h3, .footer-contact h3 {
+.footer-about h3,
+.footer-services h3,
+.footer-contact h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .footer-about span {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .footer-about p {
@@ -346,14 +356,13 @@ footer {
 
 .footer-services ul li a:hover {
     color: var(--secondary-color);
-    padding-left: 5px;
 }
 
 .footer-contact p {
     margin-bottom: 15px;
+    color: var(--light-gray);
     display: flex;
     align-items: center;
-    color: var(--light-gray);
 }
 
 .footer-contact p i {
@@ -395,7 +404,7 @@ footer {
     color: var(--medium-gray);
 }
 
-/* Page Hero Styles */
+/* Page Hero Styles (for inner pages) */
 .page-hero {
     background-color: var(--accent-color);
     padding: 80px 0;
@@ -415,87 +424,105 @@ footer {
     margin: 0 auto;
 }
 
-/* Services Page Styles */
-.services-detailed {
+/* Detailed Services Page Styles */
+.detailed-services {
     padding: 80px 0;
 }
 
-.service-item {
+.service-detail {
     display: flex;
-    align-items: flex-start;
     margin-bottom: 80px;
-    padding: 50px;
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-}
-
-.service-item:hover {
-    box-shadow: var(--hover-shadow);
+    align-items: flex-start;
 }
 
 .service-icon {
-    font-size: 3rem;
-    margin-right: 40px;
+    font-size: 2.5rem;
     color: var(--primary-color);
+    margin-right: 40px;
     flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border-radius: 50%;
 }
 
 .service-content h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.service-content .hook {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.service-content .body {
-    margin-bottom: 15px;
-}
-
-.service-content .context {
-    margin-bottom: 30px;
+.service-content p {
+    margin-bottom: 20px;
     color: var(--dark-gray);
+    font-size: 1.1rem;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    margin: 30px 0 15px;
+    font-weight: 700;
+}
+
+.service-content ul {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.service-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* CTA Section Styles */
-.cta-section {
+.cta {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 80px 0;
     text-align: center;
 }
 
-.cta-section h2 {
+.cta h2 {
     font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
-.cta-section p {
+.cta p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cta-section .btn {
+.cta .btn {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border-color: var(--secondary-color);
 }
 
-.cta-section .btn:hover {
+.cta .btn:hover {
     background-color: transparent;
     color: var(--secondary-color);
 }
 
 /* About Page Styles */
-.about-story {
+.about-story,
+.about-approach,
+.about-expertise {
     padding: 80px 0;
 }
 
@@ -506,23 +533,21 @@ footer {
     align-items: center;
 }
 
-.about-image img {
-    width: 100%;
-    box-shadow: var(--box-shadow);
-}
-
 .about-content h2 {
-    font-size: 2.5rem;
+    text-align: left;
     margin-bottom: 30px;
 }
 
 .about-content p {
     margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--dark-gray);
 }
 
-.about-approach {
-    padding: 80px 0;
-    background-color: var(--accent-color);
+.about-image img {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: var(--box-shadow);
 }
 
 .approach-grid {
@@ -532,11 +557,12 @@ footer {
 }
 
 .approach-card {
-    background-color: var(--secondary-color);
-    padding: 40px 30px;
     text-align: center;
+    padding: 30px;
+    background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    border-radius: 0;
 }
 
 .approach-card:hover {
@@ -545,60 +571,47 @@ footer {
 }
 
 .approach-card .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-color);
 }
 
 .approach-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
-}
-
-.about-expertise {
-    padding: 80px 0;
-}
-
-.expertise-content > p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 50px;
-    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-bottom: 50px;
 }
 
 .expertise-item {
+    background-color: var(--accent-color);
     padding: 30px;
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
+    border-radius: 0;
     transition: var(--transition);
 }
 
 .expertise-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--hover-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .expertise-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+    font-weight: 700;
 }
 
-.expertise-item h3 i {
-    margin-right: 10px;
-    color: var(--primary-color);
+.expertise-item p {
+    color: var(--dark-gray);
 }
 
 /* Contact Page Styles */
-.contact-section {
+.contact {
     padding: 80px 0;
 }
 
@@ -608,56 +621,58 @@ footer {
     gap: 50px;
 }
 
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.contact-info > p {
-    margin-bottom: 40px;
+.contact-info p {
+    margin-bottom: 30px;
     font-size: 1.1rem;
+    color: var(--dark-gray);
 }
 
-.contact-details {
-    margin-bottom: 40px;
-}
-
-.contact-item {
+.info-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-.contact-item i {
+.info-item i {
     font-size: 1.5rem;
-    margin-right: 15px;
     color: var(--primary-color);
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border-radius: 50%;
 }
 
-.contact-item h3 {
+.info-item h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .social-connect h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.contact-form-container {
+.contact-form {
     background-color: var(--secondary-color);
     padding: 40px;
+    border-radius: 0;
     box-shadow: var(--box-shadow);
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .form-group input,
@@ -666,8 +681,7 @@ footer {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid var(--light-gray);
-    background-color: var(--secondary-color);
-    font-family: inherit;
+    border-radius: 0;
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -680,23 +694,15 @@ footer {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit {
-    width: 100%;
-}
-
 .form-status {
     margin-top: 15px;
+    font-weight: 600;
     text-align: center;
-    font-weight: 500;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .hero-content h2 {
-        font-size: 2.8rem;
-    }
-    
-    .service-item {
+    .service-detail {
         flex-direction: column;
         padding: 30px;
     }
@@ -768,11 +774,11 @@ footer {
     .about-story,
     .about-approach,
     .about-expertise,
-    .contact-section {
+    .contact {
         padding: 60px 0;
     }
     
-    .service-item {
+    .service-detail {
         margin-bottom: 40px;
     }
 }
@@ -802,7 +808,7 @@ footer {
         font-size: 1.5rem;
     }
     
-    .contact-form-container {
+    .contact-form {
         padding: 25px;
     }
 }
